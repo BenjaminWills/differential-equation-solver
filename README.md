@@ -41,4 +41,21 @@ y_1 = y_0 + f(x_0,y_0) (x_1-x_0)
 \end{align}
 $$
 
-This is supposing that $|x_{i+1} - x_i|$ is sufficiently small, thus small interval sizes will lead to more exact solutions.
+This is supposing that $|x_{i+1} - x_i|$ is sufficiently small, thus small interval sizes will lead to more exact solutions. Now we are equipped to write the iterative method.
+
+$$
+\begin{align}
+y_{i+1} = y_i + f(x_i,y_i) (x_{i+1}-x_i)
+\end{align}
+$$
+
+Keep in mind that we will keep step sizes constant to simplify the problem, thus $x_{i+1} - x_i = h \ \forall i$. Thus we can state the solution as follows
+
+$$
+\begin{align}
+y_{i+1} = y_i + f(x_i,y_i) h \\
+(x_0,y_0) = (x_0,y(x_0))
+\end{align}
+$$
+
+One can intuitively see this as drawing multiple tangent lines at even intervals and connecting them at their intersection, when the distance between intervals shrinks the lines become shorter and mirror the shape of the curve more and more.
