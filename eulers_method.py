@@ -1,8 +1,6 @@
 from typing import Callable
 import numpy as np
 
-import matplotlib.pyplot as plt
-
 def euler_method(function:Callable,initial_values:list,endpoint:float,num_steps:int,) -> tuple:
     """Solves linear first order ODEs.
 
