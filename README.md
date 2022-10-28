@@ -60,3 +60,5 @@ h = x_{i+1} - x_i\\
 $$
 
 One can intuitively see this as drawing multiple tangent lines at even intervals and connecting them at their intersection, when the distance between intervals shrinks the lines become shorter and mirror the shape of the curve more and more.
+
+NOTE: say that we want to approximate a function on the interval $[x_0,b]$ for some constant $b$, in $n$ intervals, then we can calculate our interval width, $h$ as $h = \frac{b-x_0}{n}$.
