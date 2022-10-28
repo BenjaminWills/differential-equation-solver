@@ -6,8 +6,13 @@ In this repository I am going to explore some techniques to solve some different
 
 A differential equation is any equation that involves derivatives and functions, the simplest example is the equation:
 
-$$\frac{dy}{dx} = f(x) \ \ \ x \in \R$$
+$$
+\begin{align*}
+\frac{dy}{dx} = f(x) \ \ \ x \in \R
+\\ y(a) = b \ \ \ a \in \R
+\end{align*}
+$$
 
-which has the solution
+which has the solution:
 
-$$y= \int$$
+$$y= \int^{x}_{a}f(x)dx$$
