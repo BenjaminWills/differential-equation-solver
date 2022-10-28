@@ -14,7 +14,11 @@ def euler_method(function:Callable,initial_values:list,endpoint:float,num_steps:
     return x_intervals,y_values
 
 
-
+def euler_method_error(solution:Callable,function:Callable,initial_values:list,endpoint:float,num_steps:int,) -> list:
+    x_range,numerical_solution = euler_method(function,initial_values,endpoint,num_steps)
+    true_solution = [solution(x) for x in x_range]
+    error = [abs(true_solution[i] - numerical_solution[i])/true_solution[i] * 100.0 for i in range(num_steps)]
+    return x_range,error
 
 
 
