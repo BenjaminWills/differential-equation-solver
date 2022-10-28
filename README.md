@@ -54,7 +54,8 @@ Keep in mind that we will keep step sizes constant to simplify the problem, thus
 $$
 \begin{align}
 y_{i+1} = y_i + f(x_i,y_i) h \\
-(x_0,y_0) = (x_0,y(x_0))
+h = x_{i+1} - x_i\\
+(x_0,y_0) = (x_0,y(x_0)) \\
 \end{align}
 $$
 
