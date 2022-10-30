@@ -68,8 +68,8 @@ In this case we can simply apply eulers method to both $(11)$ and $(12)$ simulta
 
 $$
 \begin{align}
-y_{i+1} = y_{i} + v_{i} * h \\
-v_{i+1} = v_{i} + f(x_i,y_i,v_i) * h
+y_{i+1} = y_{i} + v_{i} h \\
+v_{i+1} = v_{i} + f(x_i,v_i,y_i) h
 \end{align}
 $$
 
