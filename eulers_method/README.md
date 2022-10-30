@@ -51,7 +51,7 @@ This is an equation of the form
 $$
 \begin{align}
 \frac{d^2 y}{d x^2} = f(x,\frac{dy}{dx},y) \\
-\left . \frac{dy}{dx} \right|_{x_0} = v_0, \ y(x_0) = y_0
+\left . \frac{dy}{dx} \right|_{x=x_0} = v_0, \ y(x_0) = y_0
 \end{align}
 $$
 
