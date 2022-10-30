@@ -70,22 +70,3 @@ def euler_method_error(solution:Callable,function:Callable,initial_values:list,e
     error = [abs(true_solution[i] - numerical_solution[i])/true_solution[i] * 100.0 for i in range(num_steps)]
     return x_range,error
 
-
-import matplotlib.pyplot as plt
-if __name__ ==  "__main__":
-    x_0 = 1
-    k = 1
-    m = 1
-    def RHS(t,x,k,m):
-        return -k*x/m
-    
-    x,y = second_order_euler(
-        function = lambda t,x: RHS(t,x,k,m),
-        position_initial_values=[0,x_0],
-        velocity_initial_value=0,
-        endpoint = 10,
-        num_steps = 5_00
-    )
-    plt.scatter(x,y)
-    plt.plot(x,x_0 * np.cos(x))
-    plt.show()
