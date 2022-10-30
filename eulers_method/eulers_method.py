@@ -29,6 +29,26 @@ def euler_method(function:Callable,initial_values:list,endpoint:float,num_steps:
     return x_intervals,y_values
 
 def second_order_euler(function:Callable,position_initial_values:list,velocity_initial_value:float,endpoint:float,num_steps:int,) -> tuple:
+    """Solves linear second order ODEs
+
+    Parameters
+    ----------
+    function : Callable
+        RHS of the differential equation (of the form f(x,y,v))
+    position_initial_values : list
+        a list of position and time.
+    velocity_initial_value : float
+        a list of velocity and time
+    endpoint : float
+        Endpoint to plot to
+    num_steps : int
+        Number of steps
+
+    Returns
+    -------
+    tuple
+        A tuple of the intervals and the y co ordinates of the functions.
+    """
     x_0,y_0 = position_initial_values
     v_0 = velocity_initial_value
     step_size = (endpoint - x_0) / num_steps
@@ -51,7 +71,7 @@ def euler_method_error(solution:Callable,function:Callable,initial_values:list,e
     solution : Callable
         True solution to ODE
     function : Callable
-        Function on the RHS of the dy/dx
+        Function on the RHS of the dy/dx 
     initial_values : list
         Boundary values for the function
     endpoint : float
