@@ -14,7 +14,6 @@ def euler_method(function:Callable,initial_values:list,endpoint:float,num_steps:
         X co ordinate of the end point
     num_steps : int
         Number of steps to take, more = more exact
-
     Returns
     -------
     tuple
@@ -38,7 +37,7 @@ def second_order_euler(function:Callable,position_initial_values:list,velocity_i
     v_values = [v_0]
     for i in range(1,num_steps):
         new_y = y_values[i-1] + v_values[i-1] * step_size
-        new_v = v_values[i-1] + function(x_intervals[i-1],y_values[i-1]) * step_size
+        new_v = v_values[i-1] + function(x_intervals[i-1],y_values[i-1],v_values[i-1]) * step_size
         y_values.append(new_y)
         v_values.append(new_v)
     return x_intervals,y_values

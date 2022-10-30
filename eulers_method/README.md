@@ -50,7 +50,7 @@ This is an equation of the form
 
 $$
 \begin{align}
-\frac{d^2 y}{d x^2} = f(x,y) \\
+\frac{d^2 y}{d x^2} = f(x,\frac{dy}{dx},y) \\
 \left . \frac{dy}{dx} \right|_{x_0} = v_0, \ y(x_0) = y_0
 \end{align}
 $$
@@ -59,7 +59,7 @@ We can reduce the order of this system, by splitting up the derivatives into $v 
 
 $$
 \begin{align}
-\frac{dv}{dx} = f(x,y) \\
+\frac{dv}{dx} = f(x,v,y) \\
 v = \frac{dy}{dx}
 \end{align}
 $$
@@ -69,6 +69,8 @@ In this case we can simply apply eulers method to both $(11)$ and $(12)$ simulta
 $$
 \begin{align}
 y_{i+1} = y_{i} + v_{i} * h \\
-v_{i+1} = v_{i} + f(x_i,y_i) * h
+v_{i+1} = v_{i} + f(x_i,y_i,v_i) * h
 \end{align}
 $$
+
+Eulers method will work for any linear ODE.
